@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>60-Day Interview Prep Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>60-Day Interview Prep Tracker</h1>
+    <p class="subtitle">DSA · Java+SpringBoot · SQL · System Design · Design Patterns · Projects · AI · Random Stuff</p>
+    <span id="sync-badge" class="sync-badge badge-local">Checking sync status…</span>
+  </header>
+
+  <main>
+    <section class="stats-panel">
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-days-complete">0 / 60</div>
+        <div class="stat-card__label">Days complete</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-days-partial">0</div>
+        <div class="stat-card__label">Days in progress</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-longest-streak">0</div>
+        <div class="stat-card__label">Longest complete streak</div>
+      </div>
+    </section>
+
+    <section class="category-stats">
+      <h2>Per-category progress</h2>
+      <div id="category-stats"></div>
+    </section>
+
+    <section class="grid-section">
+      <h2>Days</h2>
+      <div class="day-grid" id="day-grid"></div>
+      <div class="legend">
+        <span><span class="legend-swatch legend-swatch--gray"></span> Not started</span>
+        <span><span class="legend-swatch legend-swatch--yellow"></span> In progress</span>
+        <span><span class="legend-swatch legend-swatch--green"></span> Complete</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="detail-modal">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2 id="modal-title">Day 1</h2>
+        <button class="modal__close" id="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal__progress" id="modal-progress">0 / 8 tasks complete</div>
+      <div id="modal-task-list"></div>
+      <div class="modal__nav">
+        <button class="nav-btn" id="prev-day-btn">&larr; Previous day</button>
+        <button class="nav-btn" id="next-day-btn">Next day &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="supabase-client.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
