@@ -20,8 +20,8 @@
  * ---------------------------------------------------------------------------
  */
 
-const SUPABASE_URL = $SUPABASE_URL;
-const SUPABASE_ANON_KEY = $SUPABASE_ANON_KEY;
+const SUPABASE_URL = "$SUPABASE_URL";
+const SUPABASE_ANON_KEY = "$SUPABASE_ANON_KEY";
 
 const TABLE_NAME = "tracker_state";
 const ROW_ID = 1; // single-row table; this app only ever reads/writes id=1
